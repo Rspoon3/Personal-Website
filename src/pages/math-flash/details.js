@@ -1,14 +1,16 @@
 import React from "react";
 import Layout from "../../components/layout/layout";
 import SEO from "../../components/layout/seo";
-import privacy from "../../markdown/study-sets-privacy.md";
+import aboutMe from "../../markdown/about-me.md";
+import description from "../../markdown/math-flash-description.md";
 import Markdown from "../../markdown/markdown-importer";
 
 export default function StudySetsPrivacy() {
   return (
     <Layout>
-      <SEO title="Study Sets Privacy & Terms" />
-      <Markdown source={privacy} />
+      <SEO title="Math Flash Details" />
+      <Markdown source={description} />
+      <Markdown source={aboutMe} />
     </Layout>
   );
 }
