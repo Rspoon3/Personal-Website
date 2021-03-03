@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Personal Website",
+    title: `Richard Witherspoon III`,
+    description: `Richard Witherspoon III is an iOS developer who works full time for InterPro Solutions while also making his own apps in his free time.`,
+    author: `@richardWitherspoon3`,
   },
   plugins: [
     "gatsby-plugin-styled-components",

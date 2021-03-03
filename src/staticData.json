@@ -1,0 +1,82 @@
+{
+  "apps": [
+    {
+      "title": "EZMaxRequest",
+      "tagline": "Streamlining Maximo request managemen.",
+      "icon": "/images/EZMaxRequest/AppIcon_180.png",
+      "moreLink": "https://interprosoft.com/products-services/ezmaxrequest/",
+      "appLink": "https://apps.apple.com/us/app/id1523072451",
+      "images": [
+        "/images/EZMaxRequest/screenshot_ipad_landscape_device_07.PNG",
+        "/images/EZMaxRequest/screenshot_iphone_device_010.PNG",
+        "/images/EZMaxRequest/screenshot_iphone_device_01.PNG"
+      ],
+      "description": "EZMaxRequest is a full-featured mobile app that streamlines request management by enabling authorized community members to initiate a Maximo work request, upload pictures, communicate with service providers, and enjoy real-time visibility into ongoing processes – all from an intuitive, secure mobile app that is easily tailored to your organization’s specific needs."
+    },
+    {
+      "title": "Cinematic",
+      "tagline": "Search. Save. Simple.",
+      "moreLink": "/cinematic",
+      "appLink": "https://apps.apple.com/us/app/id1537142179",
+      "icon": "/images/cinematic/AppIcon_512.png",
+      "images": [
+        "/images/cinematic/Cinematic_iPad_11_Inch_1.png",
+        "/images/cinematic/Cinematic_iPhone11_4.png",
+        "/images/cinematic/Cinematic_iPhone11_6.png"
+      ],
+      "description": "Cinematic lets you browse which movies are playing, the most popular, upcoming, and the most top rated movies of all time. With full iOS 13 and iPad support, it looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use. Check different categories, search for any movie, and save your favorites to your own personal collection. With Cinematic, movies have never looked so good."
+    },
+    {
+      "title": "Study Sets",
+      "tagline": "Studying made simple.",
+      "icon": "/images/study sets/AppIcon_512.png",
+      "moreLink": "/study-sets",
+      "appLink": "https://apps.apple.com/us/app/id1515133577",
+      "images": [
+        "/images/study sets/cardScreen.png",
+        "/images/study sets/worldHistory.png",
+        "/images/study sets/swipe.png"
+      ],
+      "description": "School is hard enough. Lets make studying easier. The goal was to create an app that is easy and intuitive, while taking advantage of native iOS features, such as split screen and multi-window. By targeting iOS 14, I'm including some of Apple's latest technologies from the start, such as the sidebar on iPad and the cool new color picker. With three different ways to study (matching, flashcards, and multiple choice) and features such as picture support, OCR, offline and iCloud sync, music integration, export and importing, studying has never been easier. As a subscription app ($0.99/month or $9.99 /year), all of the features are included for free without payment. The exception to this is that as a non-paying customer you are limited to creating 50 cards. Between now and the iOS 14 release, I plan on continuing to polish the final design while listening to user feedback. I would greatly appreciate it if you could take some time to check it out. Please feel free to reach out via email or on Twitter."
+    },
+    {
+      "title": "Math Flash",
+      "tagline": "Practice makes perfect.",
+      "moreLink": "/math-flash",
+      "appLink": "https://apps.apple.com/us/app/id1449259588",
+      "icon": "/images/math flash/AppIcon_512.png",
+      "images": [
+        "/images/math flash/Math_Flash_iPad_11_Inch_1.png",
+        "/images/math flash/Math_Flash_iPhoneX_1.png",
+        "/images/math flash/Math_Flash_iPhoneX_2.png"
+      ],
+      "description": "Cinematic lets you browse which movies are playing, the most popular, upcoming, and the most top rated movies of all time. With full iOS 13 and iPad support, it looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use. Check different categories, search for any movie, and save your favorites to your own personal collection. With Cinematic, movies have never looked so good."
+    },
+    {
+      "title": "Body Insights",
+      "tagline": "Your health, customized for you.",
+      "moreLink": "/body-insights",
+      "appLink": "https://apps.apple.com/us/app/id1397531585",
+      "icon": "/images/body insights/AppIcon_180.png",
+      "images": [
+        "images/body insights/phone_banner.png",
+        "images/body insights/iPhone_X_Screenshoot_1.png",
+        "images/body insights/iPhone_X_Screenshoot_2.png"
+      ],
+      "description": "Body Insights lets you customize your health statistics to your liking while keeping all of your data safe. See bar charts and line graphs along with statistics of the most popular categories supported by Health Kit. Over 60 types are currently supported such as steps, distance, swimming, walking/running, water, and many more! With full iOS 13 support, Body Insights looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use."
+    },
+    {
+      "title": "Apple Card",
+      "tagline": "The credit card that we all deserve.",
+      "moreLink": "/apple-card",
+      "appLink": "https://github.com/Rspoon3/Apple-Card",
+      "icon": "/images/apple card/AppIcon_180.png",
+      "images": [
+        "/images/apple card/phone_banner.png",
+        "/images/apple card/iPhone_X_Screenshoot_1.png",
+        "/images/apple card/iPhone_X_Screenshoot_2.png"
+      ],
+      "description": "On March 25, 2019 Apple held an event announcing it’s new services plans. This included Apple Card. I thought that the card and application associated with it looked very interesting. As a jr developer I was intrigued with how they might have coded the UI. As such, I was intrigued and very much wanted to get the card and explore the app that came with it. Unfortunately it was announced that it wouldn’t be be available until this summer. Not to be deterred I thought I would make my own version of the Apple Card App! This is just a simulation of what I expected Apple’s final application to look and feel like. The entire thing was based off the videos and photos that the company has released to the public. I have no information about the actual application or card. This is entirely an interactive UI mock up."
+    }
+  ]
+}
