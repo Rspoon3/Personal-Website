@@ -5,13 +5,47 @@ import aboutMe from "../../markdown/about-me.md";
 import description from "../../markdown/study-sets-description.md";
 import Markdown from "../../markdown/markdown-importer";
 import styled from "styled-components";
+import Img from "gatsby-image";
+import { graphql, useStaticQuery } from "gatsby";
 
-export default function StudySetsPrivacy() {
+export default function StudySetsIndex() {
+  const data = useStaticQuery(graphql`
+    query Images {
+      images: allFile(
+        filter: {
+          relativeDirectory: { eq: "study sets" }
+          name: { nin: ["AppIcon_512", "cardScreen", "swipe", "worldHistory"] }
+        }
+      ) {
+        nodes {
+          id
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+
+      device_banner: file(
+        relativePath: { eq: "study sets/device_banner.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <SEO title="Study Sets Details" />
       <Container>
-        <ImageCell src={"../../images/study sets/cardScreen.png"} />
+        <HeaderImageContainer>
+          <Img fluid={data.device_banner.childImageSharp.fluid} />
+        </HeaderImageContainer>
         <Markdown source={description} />
         <MarkdownContainer>
           <h1>Press Kit</h1>
@@ -22,6 +56,10 @@ export default function StudySetsPrivacy() {
             </a>
             .
           </p>
+
+          {data.images.nodes.map((image) => (
+            <Img fluid={image.childImageSharp.fluid} />
+          ))}
         </MarkdownContainer>
         <Markdown source={aboutMe} />
       </Container>
@@ -29,8 +67,8 @@ export default function StudySetsPrivacy() {
   );
 }
 
-const ImageCell = styled.img`
-  max-width: 50%;
+const HeaderImageContainer = styled.div`
+  max-width: 600px;
 
   display: block;
   margin-left: auto;
