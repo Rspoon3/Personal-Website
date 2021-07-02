@@ -7,6 +7,7 @@ import Markdown from "../../markdown/markdown-importer";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function StudySetsIndex() {
   const data = useStaticQuery(graphql`
@@ -18,7 +19,6 @@ export default function StudySetsIndex() {
         }
       ) {
         nodes {
-          id
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -43,7 +43,25 @@ export default function StudySetsIndex() {
     <Layout>
       <SEO title="Study Sets Details" />
       <Container>
-        <HeaderImageContainer>
+        <h1>Study Sets</h1>
+        <Test>
+          <div>
+            <h4>Your emails organised in the blink of an A.I.</h4>
+
+            <p>
+              Big Mail can intelligently and automatically organise your inbox
+              into distinct categories (we call them Scenes). Whether it's
+              elevating important conversations, or filing away your latest
+              purchases, Big Mail has you covered.
+            </p>
+          </div>
+          <StaticImage
+            src="../../images/study sets/cardScreen.png"
+            alt="Pictures of Ricky"
+            height={400}
+          />
+        </Test>
+        {/* <HeaderImageContainer>
           <Img fluid={data.device_banner.childImageSharp.fluid} />
         </HeaderImageContainer>
         <Markdown source={description} />
@@ -61,11 +79,22 @@ export default function StudySetsIndex() {
             <Img fluid={image.childImageSharp.fluid} />
           ))}
         </MarkdownContainer>
-        <Markdown source={aboutMe} />
+        <Markdown source={aboutMe} /> */}
       </Container>
     </Layout>
   );
 }
+
+const Test = styled.div`
+  background-color: white;
+  max-width: 500px;
+  margin: auto;
+  padding-top: 10px;
+  /* padding-bottom: 40px; */
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 20px;
+`;
 
 const HeaderImageContainer = styled.div`
   max-width: 600px;
@@ -98,7 +127,10 @@ const MarkdownContainer = styled.div`
 `;
 
 const Container = styled.div`
-  background-color: rgb(6, 24, 40);
+  /* background-color: rgb(6, 24, 40); */
+
+  background-color: lightgray;
+  height: 900px;
 
   & h1 {
     color: dodgerblue;

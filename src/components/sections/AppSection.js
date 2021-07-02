@@ -1,50 +1,98 @@
 import React from "react";
 import styled from "styled-components";
+import { graphql, useStaticQuery } from "gatsby";
 
-const App = (props) => (
-  <Container>
-    <GridContainer>
-      <div>
-        <ImageGridContainer count={props.images.length} index={props.index}>
-          {props.images.map((image) => (
-            <ImageCell src={image} />
-          ))}
-        </ImageGridContainer>
-      </div>
-      <TextContainer index={props.index}>
-        <IconWrapper>
-          <Icon src={props.icon} />
-          <TitleWrapper>
-            <Title>{props.title}</Title>
-            <Tagline>{props.tagline}</Tagline>
-          </TitleWrapper>
-        </IconWrapper>
-        <Description>{props.description}</Description>
-        <ButtonWrapper>
-          <a href={props.appLink}>
-            {props.index === 5 && (
-              <StoreButton src="../images/misc/see-on-github.png" />
-            )}
-            {props.index !== 5 && (
-              <StoreButton
-                src={
-                  props.index % 2 === 0
-                    ? "../images/misc/download-on-app-store-white.svg"
-                    : "../images/misc/download-on-app-store-black.svg"
-                }
-              />
-            )}
-          </a>
-          <a href={props.moreLink}>
-            <LearnMore index={props.index}>Learn More</LearnMore>
-          </a>
-        </ButtonWrapper>
-      </TextContainer>
-    </GridContainer>
-  </Container>
-);
+import appStoreButtonWhite from "../../images/misc/download-on-app-store-white.svg";
+import appStoreButtonBlack from "../../images/misc/download-on-app-store-black.svg";
 
-export default App;
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Img from "gatsby-image";
+
+export default function App(props) {
+  return (
+    <div>
+      <RoundedGatsbyImage image={props.heroImage} />
+      <TitleNew>{props.app.title}</TitleNew>
+      <ShortDescription>{props.app.shortDescription}</ShortDescription>
+    </div>
+  );
+}
+
+const TitleNew = styled.h3`
+  line-height: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+    background-color: red;
+  }
+`;
+
+const ShortDescription = styled.h5`
+  color: back;
+  opacity: 0.7;
+`;
+
+const RoundedGatsbyImage = styled(GatsbyImage)`
+  border-radius: 10px;
+`;
+
+// return (
+//     <Container>
+//       <GridContainer>
+//         <h1>{app.icon}</h1>
+//         <GatsbyImage image={image} alt={app.title} />
+
+//         <HeaderImage
+//           fluid={data.avatar.childImageSharp.fluid}
+//           alt="Steve Jobs Theatre"
+//         />
+//         <HeaderImage
+//           fluid={data.avatar.childImageSharp.fluid}
+//           alt="Steve Jobs Theatre"
+//         />
+
+//         <div>
+//           <ImageGridContainer count={props.images.length} index={props.index}>
+//             {props.images.map((image) => (
+//               <ImageCell src={image} />
+//             ))}
+//           </ImageGridContainer>
+//         </div>
+//         <TextContainer index={app.order}>
+//           <IconWrapper>
+//             <Icon src={app.icon} />
+//             <TitleWrapper>
+//               <Title>{app.title}</Title>
+//               <Tagline>{app.tagline}</Tagline>
+//             </TitleWrapper>
+//           </IconWrapper>
+//           <Description>{app.description}</Description>
+//           <ButtonWrapper>
+//             <a href={app.appLink}>
+//               {app.order === 6 && (
+//                 <GitHubWrapper>
+//                   <StaticImage src={"../../images/misc/see-on-github.png"} />
+//                 </GitHubWrapper>
+//               )}
+//               {app.order !== 6 && (
+//                 <StoreButtonSVG
+//                   src={
+//                     app.order % 2 === 0
+//                       ? appStoreButtonBlack
+//                       : appStoreButtonWhite
+//                   }
+//                 />
+//               )}
+//             </a>
+//             <a href={app.moreLink}>
+//               <LearnMore index={app.order}>Learn More</LearnMore>
+//             </a>
+//           </ButtonWrapper>
+//         </TextContainer>
+//       </GridContainer>
+//     </Container>
+//   );
+// };
 
 const Container = styled.div`
   padding-top: 100px;
@@ -82,6 +130,15 @@ const ImageGridContainer = styled.div`
 
   @media (min-width: 768px) {
     grid-area: ${(props) => (props.index % 2 === 0 ? "leading" : "trailing")};
+  }
+`;
+
+const HeaderImage = styled(Img)`
+  width: 100%;
+  height: 700px;
+
+  @media (max-width: 768px) {
+    height: 400px;
   }
 `;
 
@@ -140,15 +197,22 @@ const Tagline = styled.h2`
 `;
 
 const TextContainer = styled.div`
-  color: ${(props) => (props.index % 2 ? "black" : "white")};
+  color: ${(props) => (props.index % 2 ? "white" : "black")};
   /* background: dodgerblue; */
 
   @media (min-width: 768px) {
-    grid-area: ${(props) => (props.index % 2 === 0 ? "trailing" : "leading")};
+    grid-area: ${(props) => (props.index % 2 === 0 ? "leading" : "trailing")};
   }
 `;
 
-const Icon = styled.img`
+// const Icon = styled.img`
+//   width: 70px;
+//   height: 70px;
+//   border-radius: 10px;
+//   margin: auto;
+// `;
+
+const Icon = styled(Img)`
   width: 70px;
   height: 70px;
   border-radius: 10px;
@@ -177,16 +241,23 @@ const TitleWrapper = styled.div`
 const LearnMore = styled.body`
   height: 44px;
   width: 144px;
-  border-radius: 8px;
+  border-radius: 5px;
   line-height: 44px;
   text-align: center;
   font-weight: 500;
 
-  color: ${(props) => (props.index % 2 ? "white" : "black")};
-  background: ${(props) => (props.index % 2 ? "rgb(20, 22, 24)" : "white")};
+  color: ${(props) => (props.index % 2 ? "black" : "white")};
+  background: ${(props) => (props.index % 2 ? "white" : "rgb(20, 22, 24)")};
 `;
 
-const StoreButton = styled.img`
+const GitHubWrapper = styled.div`
+  height: 44px;
+  width: 144px;
+  margin-right: 20px;
+  object-fit: cover;
+`;
+
+const StoreButtonSVG = styled.img`
   height: 44px;
   width: 144px;
   margin-right: 20px;

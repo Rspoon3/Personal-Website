@@ -1,0 +1,11 @@
+{
+  "order": 4,
+  "title": "Cinematic",
+  "tagline": "Search. Save. Simple.",
+  "slug": "/cinematic",
+  "getAppLink": "https://apps.apple.com/us/app/id1537142179",
+  "icon": "/images/cinematic/AppIcon_512.png",
+  "heroImage": "../images/cinematic/device_promo_banner.png",
+  "shortDescription": "Browse which movies are playing, the most popular, upcoming, and the most top rated movies of all time. Check different categories, search for any movie, and save your favorites to your own currated collection. With Cinematic, movies have never looked so good.",
+  "description": "Cinematic lets you browse which movies are playing, the most popular, upcoming, and the most top rated movies of all time. With full iOS 13 and iPad support, it looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use. Check different categories, search for any movie, and save your favorites to your own personal collection. With Cinematic, movies have never looked so good."
+}

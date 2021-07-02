@@ -1,0 +1,11 @@
+{
+  "order": 5,
+  "title": "NYAB Field Service",
+  "tagline": "Easily document field visits.",
+  "slug": "/field-service",
+  "getAppLink": "https://github.com/Rspoon3/Apple-Card",
+  "icon": "../images/apple card/AppIcon_180.png",
+  "heroImage": "../images/field service/device_promo_banner.png",
+  "shortDescription": "A password protected, New York Air Brake mobile service record reference. Easily allows employees to document service vists and have customers sign off on service status. Additonally allows exporting of all data in CSV and JSON formats.",
+  "description": "test"
+}

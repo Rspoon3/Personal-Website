@@ -1,0 +1,11 @@
+{
+  "order": 8,
+  "title": "Math Flash",
+  "tagline": "Practice makes perfect.",
+  "slug": "/math-flash",
+  "getAppLink": "https://apps.apple.com/us/app/id1449259588",
+  "icon": "/images/math flash/AppIcon_512.png",
+  "heroImage": "../images/math flash/device_promo_banner.png",
+  "shortDescription": "Math Flash is the easiest way to practice your math skills and is made for skill levels of all ages. Work on subtraction, addition, multiplication, and division. With a engaging and intuative interface, children won't want to put it down.",
+  "description": "Cinematic lets you browse which movies are playing, the most popular, upcoming, and the most top rated movies of all time. With full iOS 13 and iPad support, it looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use. Check different categories, search for any movie, and save your favorites to your own personal collection. With Cinematic, movies have never looked so good."
+}
