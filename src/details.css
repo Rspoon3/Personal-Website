@@ -14,11 +14,6 @@
   max-width: 1200px;
 }
 
-.device img {
-  max-width: 100%;
-  display: inline-block;
-}
-
 .card {
   /* background-color: lightblue; */
   border: 0;
@@ -60,4 +55,7 @@
 .subtitle {
   font-size: 1.25em;
   font-weight: 600;
+}
+.figure-crop-b-50 {
+  margin-bottom: -60%;
 }

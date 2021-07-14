@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
 
-import appStoreButtonWhite from "../../images/misc/download-on-app-store-white.svg";
-import appStoreButtonBlack from "../../images/misc/download-on-app-store-black.svg";
-
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function App(props) {
   return (

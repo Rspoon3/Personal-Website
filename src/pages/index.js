@@ -1,16 +1,14 @@
 import * as React from "react";
 import SEO from "../components/layout/seo";
-import HeroSection from "../components/sections/HeroSection";
 import AboutMeSection from "../components/sections/AboutMeSection";
 import AppSection from "../components/sections/AppSection";
 import Layout from "../components/layout/layout";
 import FooterSection from "../components/sections/FooterSection";
-import NavBar from "../components/sections/NavBar";
 import NavTest from "../components/sections/NavTest";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 
 export default function IndexPage({ data }) {

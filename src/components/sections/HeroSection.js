@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { StaticImage } from "gatsby-plugin-image";
-
 export default function HeroSection() {
   const data = useStaticQuery(graphql`
     query HeroImages {
@@ -28,13 +26,6 @@ export default function HeroSection() {
   return (
     <Container>
       <HeaderContainer>
-        {/* <StaticImage
-          src="../../images/home/headerBanner.jpeg"
-          alt="Steve Jobs Theatre"
-          height={400}
-          objectFit="fill"
-        /> */}
-
         <HeaderImage
           fluid={data.headerBanner.childImageSharp.fluid}
           alt="Steve Jobs Theatre"
