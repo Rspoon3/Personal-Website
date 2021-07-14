@@ -34,9 +34,9 @@ export default function AboutMeSection() {
         <h1>{markdown.frontmatter.name}</h1>
         <p>{markdown.frontmatter.subtitle}</p>
         <ButtonDiv>
-          <Button href={markdown.frontmatter.appstore}>
+          <MyButton href={markdown.frontmatter.appstore}>
             &nbsp;&nbsp;App Store
-          </Button>
+          </MyButton>
         </ButtonDiv>
         <StaticImage
           src="../../images/study sets/device_banner.png"
@@ -68,7 +68,7 @@ const ButtonDiv = styled.div`
   padding-bottom: 150px;
 `;
 
-const Button = styled.a`
+const MyButton = styled.a`
   display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -78,6 +78,13 @@ const Button = styled.a`
   background-color: #f61d1d;
   color: #fff;
   font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.7;
+  }
 `;
 
 const TitleDiv = styled.div`

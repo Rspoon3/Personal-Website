@@ -11,6 +11,7 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Container } from "react-bootstrap";
 
 export default function IndexPage({ data }) {
   const projects = data.apps.edges;
@@ -18,31 +19,29 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <Container>
+      <Container fluid>
         <NavTest />
         <AboutMeSection />
         <BlankDiv />
-        <HorizontalPadding>
-          <ProjectSectionTitle id="projects">
-            <h1>Projects</h1>
-            <ProjectSubtitle>
-              Below you can find the most notable apps that I have worked on.
-              These include my companies applications, contracting projects, as
-              well as my own personal apps. Most of them can still be found on
-              the app store today.
-            </ProjectSubtitle>
-          </ProjectSectionTitle>
-          <ImageGridContainer>
-            {projects.map(({ node: project }) => (
-              <CustomLink to={project.slug}>
-                <AppSection
-                  app={project}
-                  heroImage={getImage(project.heroImage)}
-                />
-              </CustomLink>
-            ))}
-          </ImageGridContainer>
-        </HorizontalPadding>
+        <ProjectSectionTitle id="projects">
+          <h1>Projects</h1>
+          <ProjectSubtitle>
+            Below you can find the most notable apps that I have worked on.
+            These include my companies applications, contracting projects, as
+            well as my own personal apps. Most of them can still be found on the
+            app store today.
+          </ProjectSubtitle>
+        </ProjectSectionTitle>
+        <ImageGridContainer>
+          {projects.map(({ node: project }) => (
+            <CustomLink to={project.slug}>
+              <AppSection
+                app={project}
+                heroImage={getImage(project.heroImage)}
+              />
+            </CustomLink>
+          ))}
+        </ImageGridContainer>
       </Container>
       <FooterSection />
     </Layout>
@@ -69,11 +68,6 @@ export const query = graphql`
   }
 `;
 
-const HorizontalPadding = styled.div`
-  padding-left: 25px;
-  padding-right: 25px;
-`;
-
 const BlankDiv = styled.div`
   height: 40px;
 `;
@@ -96,11 +90,6 @@ const ImageGridContainer = styled.div`
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 70px;
   }
-`;
-
-const Container = styled.div`
-  /* padding-right: 35px;
-  padding-left: 35px; */
 `;
 
 const ProjectSectionTitle = styled.div`
