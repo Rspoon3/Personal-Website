@@ -26,20 +26,12 @@
   padding: 2em;
 }
 
-.figure-ipad {
-  width: 100%;
-  min-height: 400px;
-  height: 60vh;
-  background-position: top left;
-  background-size: 150%;
-  margin: 0;
-  margin-top: -2em;
+.figure-crop-b-50 {
+  margin-bottom: -55%;
 }
+
 .bg-light {
   background-color: #f5f5f7 !important;
-}
-.text-indigo {
-  color: #622aff;
 }
 
 .detail {
@@ -47,15 +39,21 @@
   font-size: 1.1em;
   line-height: 1.5em;
 }
-.bg-indigo {
-  background-color: #622aff !important;
-  background: linear-gradient(45deg, #622aff, #dd04d1);
-  color: #fff;
-}
+
 .subtitle {
   font-size: 1.25em;
   font-weight: 600;
 }
-.figure-crop-b-50 {
-  margin-bottom: -60%;
+
+.title {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.card.dark {
+  background-color: black;
+  color: #fff;
+}
+.text-muted {
+  color: #6c757d !important;
 }

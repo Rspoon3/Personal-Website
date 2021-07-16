@@ -39,7 +39,7 @@ export default function AboutMeSection() {
           </MyButton>
         </ButtonDiv>
         <StaticImage
-          src="../../images/study sets/device_banner.png"
+          src="../../images/study sets/device-banner.png"
           alt="Macbook Pro running Xcode"
           height={390}
         />

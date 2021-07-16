@@ -2,15 +2,28 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Col, Container, Row, Card, Figure } from "react-bootstrap";
 import { auto } from "@popperjs/core";
-import iphone from "../../images/study sets/intro-phone-alt.jpg";
+import ipadAllSetsSidebar from "../../../images/study sets/ipad/framed/all-sets-sidebar.png";
+import ipadEditCard from "../../../images/study sets/ipad/framed/edit-card.png";
 
 export default function StudySetsFirstDetails() {
+  const textColor = {
+    color: "#1e91fc",
+  };
+
+  const backGradient = {
+    backgroundColor: "#622aff !important",
+    background: "linear-gradient(45deg, #64b6f9, #3536f7)",
+    color: "#fff",
+  };
+
   return (
     <div class="section bg-light py-5">
-      <Container fluid="xxl" className="py-5 px-lg-4">
+      <Container fluid="xxl" className="px-lg-4">
         <Row className="px-4 pb-4">
           <Col lg="8">
-            <h2 class="text-indigo">Big Smarts</h2>
+            <h2 class="title" style={textColor}>
+              Big Smarts
+            </h2>
             <p class="subtitle">
               Big Mail is packed with advance features to make your inbox
               smarter and more organised, all without compromising on privacy.
@@ -22,7 +35,7 @@ export default function StudySetsFirstDetails() {
           <Col lg="7">
             <Card>
               <Card.Body>
-                <h3 class="text-indigo">
+                <h3 style={textColor}>
                   Your emails organised in the blink of an A.I.
                 </h3>
                 <p class="detail">
@@ -33,14 +46,23 @@ export default function StudySetsFirstDetails() {
                 </p>
               </Card.Body>
               <Figure
-                className="figure-ipad"
-                style={{ backgroundImage: `url(${iphone})` }}
+                style={{
+                  backgroundImage: `url(${ipadAllSetsSidebar})`,
+                  width: "103%",
+                  minHeight: "300px",
+                  height: "50vh",
+                  backgroundPosition: "top left",
+                  backgroundSize: "120%",
+                  margin: "0",
+                  marginLeft: "3%",
+                  marginTop: -"2em",
+                }}
               ></Figure>
             </Card>
           </Col>
 
           <Col lg="5" className="d-flex">
-            <Card className="bg-indigo">
+            <Card style={backGradient}>
               <Card.Body className="d-flex flex-column">
                 <h3>On device categorisation</h3>
                 <div class="d-flex flex-grow-1 align-items-center">
@@ -57,7 +79,7 @@ export default function StudySetsFirstDetails() {
           <Col lg="12" className="d-flex">
             <Card class="d-flex">
               <Card.Body>
-                <h3 class="text-indigo">Let your emails make a Scene</h3>
+                <h3 style={textColor}>Let your emails make a Scene</h3>
                 <p class="detail">
                   Rather than present every email in the same way, a Scene in
                   Big Mail optimises the layout specifically for it. It makes
@@ -68,24 +90,24 @@ export default function StudySetsFirstDetails() {
                 </p>
               </Card.Body>
 
-              <Row className="gx-5 px-5">
+              <Row className="g-0">
                 <Col sm="4">
                   <StaticImage
-                    src="../../images/study sets/worldHistory.png"
+                    src="../../../images/study sets/iphone/framed/swipe.png"
                     class="figure-iphone"
                     alt="Screenshot of Conversations Scene"
                   />
                 </Col>
                 <Col sm="4">
                   <StaticImage
-                    src="../../images/study sets/worldHistory.png"
+                    src="../../../images/study sets/iphone/framed/match-maker.png"
                     class="figure-iphone"
                     alt="Screenshot of Conversations Scene"
                   />
                 </Col>
                 <Col sm="4">
                   <StaticImage
-                    src="../../images/study sets/worldHistory.png"
+                    src="../../../images/study sets/iphone/framed/multiple-guess.png"
                     class="figure-iphone"
                     alt="Screenshot of Conversations Scene"
                   />
@@ -97,7 +119,7 @@ export default function StudySetsFirstDetails() {
           <Col lg="5" className="d-flex">
             <Card className="d-flex">
               <Card.Body>
-                <h3 class="text-indigo">Reply now or Reply Later.</h3>
+                <h3 style={textColor}>Reply now or Reply Later.</h3>
                 <p class="detail">
                   Ever receive an email but can't reply to it right away? Big
                   Mail has a built in "Reply Later" workflow so you can pick it
@@ -105,7 +127,7 @@ export default function StudySetsFirstDetails() {
                 </p>
               </Card.Body>
               <StaticImage
-                src="../../images/study sets/worldHistory.png"
+                src="../../../images/study sets/iphone/framed/worldHistory.png"
                 class="figure-iphone figure-crop-b-50"
                 alt="Screenshot of reply later"
                 style={{
@@ -120,9 +142,7 @@ export default function StudySetsFirstDetails() {
           <Col lg="7" className="d-flex">
             <Card>
               <Card.Body>
-                <h3 class="text-indigo">
-                  Approve new senders with The Bouncer
-                </h3>
+                <h3 style={textColor}>Approve new senders with The Bouncer</h3>
                 <p class="detail">
                   With Big Mail you decide who gets in your inbox. The first
                   time someone emails you they appear in The Bouncer, then you
@@ -131,8 +151,17 @@ export default function StudySetsFirstDetails() {
                 </p>
               </Card.Body>
               <Figure
-                className="figure-ipad"
-                style={{ backgroundImage: `url(${iphone})` }}
+                style={{
+                  backgroundImage: `url(${ipadEditCard})`,
+                  width: "120%",
+                  minHeight: "300px",
+                  height: "40vh",
+                  backgroundPosition: "top left",
+                  backgroundSize: "100%",
+                  margin: "0",
+                  marginLeft: "3%",
+                  marginTop: -"2em",
+                }}
               ></Figure>
             </Card>
           </Col>

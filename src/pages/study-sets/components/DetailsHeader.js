@@ -1,7 +1,7 @@
 import React from "react";
-import ipad from "../../images/study sets/intro-pad.jpg";
-import iphone from "../../images/study sets/intro-phone-alt.jpg";
-import mac from "../../images/study sets/cardScreen.png";
+import allSets from "../../../images/study sets/ipad/framed/all-sets.png";
+import iphone from "../../../images/study sets/iphone/framed/tags.png";
+import cardScreen from "../../../images/study sets/ipad/framed/ipad-card-screen.png";
 import styled from "styled-components";
 
 const Title = styled.h1`
@@ -26,9 +26,7 @@ const TitleDiv = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(to right, #622aff 0%, #dd04d1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #64b6f9;
 `;
 
 export default function StudySetsDetailsHeader() {
@@ -36,11 +34,11 @@ export default function StudySetsDetailsHeader() {
     <div class="device-grid-container">
       <div class="device-grid">
         <img
-          src={ipad}
-          alt="iPad"
+          src={allSets}
+          alt="iPad all sets view"
           style={{
-            marginTop: "130%",
-            maxWidth: "200%",
+            marginTop: "100%",
+            maxWidth: "180%",
             marginLeft: "-20%",
           }}
         />
@@ -54,10 +52,11 @@ export default function StudySetsDetailsHeader() {
         </TitleDiv>
 
         <img
-          src={mac}
+          src={cardScreen}
           style={{
             maxWidth: "250%",
-            marginTop: "50%",
+            marginTop: "40%",
+            marginLeft: "10%",
           }}
           alt="Macbook"
         />
@@ -65,7 +64,7 @@ export default function StudySetsDetailsHeader() {
           src={iphone}
           style={{
             maxWidth: "150%",
-            marginTop: "-100%",
+            marginTop: "-110%",
           }}
           alt="iPhone"
         />
