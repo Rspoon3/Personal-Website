@@ -8,7 +8,9 @@ export default function StudySetsPrivacy() {
   return (
     <Layout>
       <SEO title="Study Sets Privacy & Terms" />
-      <Markdown source={privacy} />
+      <div style={{ padding: "20px" }}>
+        <Markdown source={privacy} />
+      </div>
     </Layout>
   );
 }
