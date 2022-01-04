@@ -38,11 +38,6 @@ export default function AboutMeSection() {
             &nbsp;&nbsp;App Store
           </MyButton>
         </ButtonDiv>
-        <StaticImage
-          src="../../images/study sets/device-banner.png"
-          alt="Macbook Pro running Xcode"
-          height={390}
-        />
       </TitleDiv>
       <Grid id="about">
         <div>
@@ -91,7 +86,7 @@ const TitleDiv = styled.div`
   text-align: center;
   margin: auto;
   max-width: 800px;
-  padding-bottom: 180px;
+  padding-bottom: 100px;
 
   p {
     font-size: 16px;
@@ -101,15 +96,18 @@ const TitleDiv = styled.div`
 
 const MarkdownDiv = styled.div`
   max-width: 600px;
+  text-align: left;
 
   @media (max-width: 768px) {
     margin: auto;
+    text-align: center;
 
     h1 {
       text-align: center;
     }
     h2 {
       text-align: center;
+      padding-top: 50px;
     }
   }
 `;

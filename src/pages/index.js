@@ -16,29 +16,24 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <Container fluid>
-        <AboutMeSection />
-        <BlankDiv />
-        <ProjectSectionTitle id="projects">
-          <h1>Projects</h1>
-          <ProjectSubtitle>
-            Below you can find the most notable apps that I have worked on.
-            These include my companies applications, contracting projects, as
-            well as my own personal apps. Most of them can still be found on the
-            app store today.
-          </ProjectSubtitle>
-        </ProjectSectionTitle>
-        <ImageGridContainer>
-          {projects.map(({ node: project }) => (
-            <CustomLink to={project.slug}>
-              <AppSection
-                app={project}
-                heroImage={getImage(project.heroImage)}
-              />
-            </CustomLink>
-          ))}
-        </ImageGridContainer>
-      </Container>
+      <AboutMeSection />
+      <BlankDiv />
+      <ProjectSectionTitle id="projects">
+        <h1>Projects</h1>
+        <ProjectSubtitle>
+          Below you can find the most notable apps that I have worked on. These
+          include my companies applications, contracting projects, as well as my
+          own personal apps. Most of them can still be found on the app store
+          today.
+        </ProjectSubtitle>
+      </ProjectSectionTitle>
+      <ImageGridContainer>
+        {projects.map(({ node: project }) => (
+          <CustomLink to={project.slug}>
+            <AppSection app={project} heroImage={getImage(project.heroImage)} />
+          </CustomLink>
+        ))}
+      </ImageGridContainer>
       <FooterSection />
     </Layout>
   );
@@ -79,6 +74,9 @@ const ImageGridContainer = styled.div`
   grid-gap: min(5vw, 70px);
 
   padding-bottom: 125px;
+  padding-left: 35px;
+  padding-right: 35px;
+
   margin: auto;
   max-width: 1700px;
 
@@ -101,6 +99,7 @@ const ProjectSubtitle = styled.h5`
   margin-bottom: 75px;
 
   @media (max-width: 768px) {
-    text-align: left;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 `;

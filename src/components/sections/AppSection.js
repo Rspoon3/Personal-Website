@@ -6,7 +6,10 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export default function App(props) {
   return (
     <div style={{ color: "black" }}>
-      <RoundedGatsbyImage image={props.heroImage} />
+      <GatsbyImage
+        image={props.heroImage}
+        imgStyle={{ borderRadius: "20px" }}
+      />
       <Title>{props.app.title}</Title>
       <ShortDescription>{props.app.shortDescription}</ShortDescription>
     </div>
@@ -22,8 +25,4 @@ const Title = styled.h3`
 const ShortDescription = styled.h5`
   color: back;
   opacity: 0.7;
-`;
-
-const RoundedGatsbyImage = styled(GatsbyImage)`
-  border-radius: 10px;
 `;
