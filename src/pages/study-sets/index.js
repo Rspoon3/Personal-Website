@@ -51,11 +51,17 @@ export default function StudySetsIndex({ data }) {
         <h5 className="py-3">
           Download the app and try it for free for with all features included.
         </h5>
-        <img
-          src={appStoreButtonBlack}
-          style={{ width: "150px", paddingTop: "25px", paddingBottom: "25px" }}
-          alt="Download on the App Store"
-        ></img>
+        <a href={app.getAppLink}>
+          <img
+            src={appStoreButtonBlack}
+            style={{
+              width: "150px",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+            }}
+            alt="Download on the App Store"
+          ></img>
+        </a>
 
         <div class="pt-5" style={{ fontSize: "15px" }}>
           <div class="text-muted">
