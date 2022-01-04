@@ -46,7 +46,7 @@ export default function StudySetsIndex({ data }) {
       <SecondDetailsSection />
       <ThirdDetailsSection />
 
-      <MaxTextWidthDiv className="py-5">
+      <MaxTextWidthDiv className="py-5 px-3">
         <h1 style={{ fontSize: "2.5em" }}>Try it for free</h1>
         <h5 className="py-3">
           Download the app and try it for free for with all features included.
