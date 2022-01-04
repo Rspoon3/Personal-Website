@@ -1,32 +1,59 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
+import Img from "gatsby-image";
+import { graphql, useStaticQuery } from "gatsby";
 
 export default function HeroSection() {
+  const data = useStaticQuery(graphql`
+    query HeroImages {
+      headerBanner: file(relativePath: { eq: "home/headerBanner.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      avatar: file(relativePath: { eq: "home/avatar.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Container>
       <HeaderContainer>
-        <HeaderImage src="/images/home/headerBanner.jpeg" alt="header" />
+        <HeaderImage
+          fluid={data.headerBanner.childImageSharp.fluid}
+          alt="Steve Jobs Theatre"
+        />
         <Title>Richard Witherspoon III</Title>
       </HeaderContainer>
-      <AvatarImage src="/images/home/avatar.jpg" alt="Richard Witherspoon" />
+
+      <AvatarImage
+        fluid={data.avatar.childImageSharp.fluid}
+        alt="Richard Witherspoon"
+      />
     </Container>
-  )
+  );
 }
 
-const HeaderImage = styled.img`
+const HeaderImage = styled(Img)`
   width: 100%;
   height: 700px;
-  object-fit: cover;
 
   @media (max-width: 768px) {
     height: 400px;
   }
-`
+`;
 
 const HeaderContainer = styled.div`
   position: relative;
   text-align: center;
-`
+`;
 
 const Container = styled.div`
   height: 775px;
@@ -34,7 +61,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     height: 475px;
   }
-`
+`;
 
 const Title = styled.h1`
   font-weight: bold;
@@ -49,8 +76,9 @@ const Title = styled.h1`
   @media (max-width: 768px) {
     font-size: 30px;
   }
-`
-const AvatarImage = styled.img`
+`;
+
+const AvatarImage = styled(Img)`
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -62,4 +90,4 @@ const AvatarImage = styled.img`
   margin-left: auto;
   margin-right: auto;
   top: -75px;
-`
+`;

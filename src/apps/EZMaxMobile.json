@@ -1,0 +1,11 @@
+{
+  "order": 3,
+  "title": "EZMaxMobile",
+  "tagline": "Easily document field visits.",
+  "slug": "https://interprosoft.com/products-services/ezmaxmobile/",
+  "getAppLink": "https://github.com/Rspoon3/Apple-Card",
+  "icon": "../images/apple card/AppIcon_180.png",
+  "heroImage": "../images/EZMaxMobile/device_promo_banner.png",
+  "shortDescription": "InterPro is the only company offering a suite of Maximo mobile apps built exclusively for IBM Maximo — using native Maximo rules, permissions, and datastores — eliminating double updates, data lags, and synchronization failures. EZMaxMobile expands upon native Maximo capabilities to mirror the way people actually work — with intuitive interfaces, bold graphics, and rich functionality.",
+  "description": "test"
+}

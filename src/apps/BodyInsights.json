@@ -1,0 +1,11 @@
+{
+  "order": 6,
+  "title": "Body Insights",
+  "tagline": "Your health, customized for you.",
+  "slug": "/body-insights",
+  "getAppLink": "https://apps.apple.com/us/app/id1397531585",
+  "icon": "/images/body insights/AppIcon_180.png",
+  "heroImage": "../images/body insights/light_phone_banner.png",
+  "shortDescription": "Customize your health statistics to your liking while keeping all of your data safe. See bar charts and line graphs along with statistics of the most popular categories supported by Health Kit. Over 60 types are currently supported such as steps, distance, swimming, walking/running, water, and many more!",
+  "description": "Body Insights lets you customize your health statistics to your liking while keeping all of your data safe. See bar charts and line graphs along with statistics of the most popular categories supported by Health Kit. Over 60 types are currently supported such as steps, distance, swimming, walking/running, water, and many more! With full iOS 13 support, Body Insights looks gorgeous in both light and dark mode. With a clean and intuitive UI, everything is easy to find and use."
+}

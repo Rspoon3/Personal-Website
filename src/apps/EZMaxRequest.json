@@ -1,0 +1,11 @@
+{
+  "order": 2,
+  "title": "EZMaxRequest",
+  "tagline": "Streamlining Maximo request managemen.",
+  "icon": "../../images/EZMaxRequest/AppIcon_180.png",
+  "slug": "https://interprosoft.com/products-services/ezmaxrequest/",
+  "getAppLink": "https://apps.apple.com/us/app/id1523072451",
+  "heroImage": "../images/EZMaxRequest/device_promo_banner.png",
+  "shortDescription": "Streamline request management by enabling community members to initiate a Maximo work request, upload pictures, communicate with service providers, and enjoy real-time visibility into ongoing processes – all from an intuitive, secure mobile app that is easily tailored to an organization’s specific needs.",
+  "description": "EZMaxRequest is a full-featured mobile app that streamlines request management by enabling authorized community members to initiate a Maximo work request, upload pictures, communicate with service providers, and enjoy real-time visibility into ongoing processes – all from an intuitive, secure mobile app that is easily tailored to your organization’s specific needs."
+}
