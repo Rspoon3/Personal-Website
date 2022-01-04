@@ -92,7 +92,7 @@ export default function StudySetsIndex({ data }) {
             </Link>
             &nbsp; • &nbsp;
             <Link
-              to="/"
+              to="privacy"
               style={{ color: "#6c757d", textDecoration: "underline" }}
             >
               Privacy Policy
