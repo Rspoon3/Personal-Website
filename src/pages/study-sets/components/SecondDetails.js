@@ -78,11 +78,10 @@ export default function StudySetsSecondDetails() {
           <Col lg="5" className="d-flex">
             <Card className="d-flex">
               <Card.Body>
-                <h3 style={textColor}>Reply now or Reply Later.</h3>
+                <h3 style={textColor}>Quick actions galor.</h3>
                 <p class="detail">
-                  Ever receive an email but can't reply to it right away? Big
-                  Mail has a built in "Reply Later" workflow so you can pick it
-                  up later on. It even syncs across all your devices.
+                  Ever want to do something quickly and move on? Study sets is
+                  all about that. Quickly edit, delete or share.
                 </p>
               </Card.Body>
               <StaticImage
@@ -101,12 +100,11 @@ export default function StudySetsSecondDetails() {
           <Col lg="7" className="d-flex">
             <Card>
               <Card.Body>
-                <h3 style={textColor}>Approve new senders with The Bouncer</h3>
+                <h3 style={textColor}>Listen to your Apple Music library</h3>
                 <p class="detail">
-                  With Big Mail you decide who gets in your inbox. The first
-                  time someone emails you they appear in The Bouncer, then you
-                  decide if you want to receive their messages. You can change
-                  your mind anytime.
+                  Study Sets has access your Apple Music libarary. Without even
+                  leaving the app you change change songs to get you in the
+                  perfect study mood.
                 </p>
               </Card.Body>
               <StaticImage
@@ -120,12 +118,11 @@ export default function StudySetsSecondDetails() {
           <Col lg="7" className="d-flex">
             <Card className="dark">
               <Card.Body>
-                <h3 style={textColor}>Approve new senders with The Bouncer</h3>
+                <h3 style={textColor}>Beautiful Design</h3>
                 <p class="detail">
-                  With Big Mail you decide who gets in your inbox. The first
-                  time someone emails you they appear in The Bouncer, then you
-                  decide if you want to receive their messages. You can change
-                  your mind anytime.
+                  Study Sets has a beautiful and elegant modern design- in both
+                  dark and light mode. You can even change the apps accent
+                  color.
                 </p>
               </Card.Body>
               <StaticImage
@@ -144,12 +141,12 @@ export default function StudySetsSecondDetails() {
           <Col lg="5" className="d-flex">
             <Card>
               <Card.Body>
-                <h3 style={textColor}>Approve new senders with The Bouncer</h3>
+                <h3 style={textColor}>Swipe Right</h3>
                 <p class="detail">
-                  With Big Mail you decide who gets in your inbox. The first
-                  time someone emails you they appear in The Bouncer, then you
-                  decide if you want to receive their messages. You can change
-                  your mind anytime.
+                  Quickly blow through study cards by swiping right if you get
+                  the answer and left if you didn't. Once you finish with the
+                  current deck you'll get a report on how you did. I bet it was
+                  fantastic.
                 </p>
               </Card.Body>
               <StaticImage

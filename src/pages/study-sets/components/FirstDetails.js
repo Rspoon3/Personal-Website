@@ -22,11 +22,11 @@ export default function StudySetsFirstDetails() {
         <Row className="px-4 pb-4">
           <Col lg="8">
             <h2 class="title" style={textColor}>
-              Big Smarts
+              Easy Organization
             </h2>
             <p class="subtitle">
-              Big Mail is packed with advance features to make your inbox
-              smarter and more organised, all without compromising on privacy.
+              Study Sets is packed with features to make studying easier than
+              every before and more organized than you can belive.
             </p>
           </Col>
         </Row>
@@ -36,13 +36,12 @@ export default function StudySetsFirstDetails() {
             <Card>
               <Card.Body>
                 <h3 style={textColor}>
-                  Your emails organised in the blink of an A.I.
+                  Your cards organised in the blink of an eye
                 </h3>
                 <p class="detail">
-                  Big Mail can intelligently and automatically organise your
-                  inbox into distinct categories (we call them Scenes). Whether
-                  it's elevating important conversations, or filing away your
-                  latest purchases, Big Mail has you covered.
+                  Study Sets allows you to oganize you're material however works
+                  best for you. Create unlimited sets, decks, and tags. Color
+                  code everything so you can quickly get started at a glance.
                 </p>
               </Card.Body>
               <Figure
@@ -64,12 +63,12 @@ export default function StudySetsFirstDetails() {
           <Col lg="5" className="d-flex">
             <Card style={backGradient}>
               <Card.Body className="d-flex flex-column">
-                <h3>On device categorisation</h3>
+                <h3> Organize anything by tags</h3>
                 <div class="d-flex flex-grow-1 align-items-center">
                   <p class="detail lg p-4">
-                    Big Mail categorises your mail on device, meaning your
-                    emails are never shared with us or anyone else. Now that's
-                    smart.
+                    Study Sets allows you to create unlimited tags. Easily
+                    organize sets, decks, or cards into multiple tags that way
+                    you can find whatever you're looking for.
                   </p>
                 </div>
               </Card.Body>
@@ -79,14 +78,12 @@ export default function StudySetsFirstDetails() {
           <Col lg="12" className="d-flex">
             <Card class="d-flex">
               <Card.Body>
-                <h3 style={textColor}>Let your emails make a Scene</h3>
+                <h3 style={textColor}>Study however you want</h3>
                 <p class="detail">
-                  Rather than present every email in the same way, a Scene in
-                  Big Mail optimises the layout specifically for it. It makes
-                  newsletters inviting, purchases easy to find, and
-                  conversations a breeze. With six Scenes – Conversations,
-                  Newsletters, Purchases, Notifications, Events and Files – your
-                  inbox has never been more organised.
+                  Study however works best works for you. Swipe through card
+                  promts flashcard style, match the term and definition, or
+                  chose the correct definiton. When you're finished you'll get a
+                  report on how you did and an offer to re-test.
                 </p>
               </Card.Body>
 
@@ -119,11 +116,11 @@ export default function StudySetsFirstDetails() {
           <Col lg="5" className="d-flex">
             <Card className="d-flex">
               <Card.Body>
-                <h3 style={textColor}>Reply now or Reply Later.</h3>
+                <h3 style={textColor}>Information at your fingertips</h3>
                 <p class="detail">
-                  Ever receive an email but can't reply to it right away? Big
-                  Mail has a built in "Reply Later" workflow so you can pick it
-                  up later on. It even syncs across all your devices.
+                  Study Sets has all critical infomation immeditely avaliable.
+                  Quickly jump into a study session, review which cards are in a
+                  deck, add more decks, or even share what you've made.
                 </p>
               </Card.Body>
               <StaticImage
@@ -142,12 +139,11 @@ export default function StudySetsFirstDetails() {
           <Col lg="7" className="d-flex">
             <Card>
               <Card.Body>
-                <h3 style={textColor}>Approve new senders with The Bouncer</h3>
+                <h3 style={textColor}>Quickly edit cards</h3>
                 <p class="detail">
-                  With Big Mail you decide who gets in your inbox. The first
-                  time someone emails you they appear in The Bouncer, then you
-                  decide if you want to receive their messages. You can change
-                  your mind anytime.
+                  Any study card you create is easily editable. Change the term,
+                  deffinition, add a picture, or assign another tag. You can
+                  even pull in text from the camera. Now thats easy.
                 </p>
               </Card.Body>
               <Figure

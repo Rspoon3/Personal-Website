@@ -6,12 +6,11 @@ import { Container } from "react-bootstrap";
 import appStoreButtonBlack from "../../images/misc/download-on-app-store-black.svg";
 import "../../details.css";
 import FooterSection from "../../components/sections/FooterSection";
-import NavTest from "../../components/sections/NavTest";
 import FirstDetailsSection from "./components/FirstDetails";
 import SecondDetailsSection from "./components/SecondDetails";
 import ThirdDetailsSection from "./components/ThirdDetails";
 import DetailsHeader from "./components/DetailsHeader";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 const MaxTextWidthDiv = styled.div`
   text-align: center;
@@ -19,31 +18,27 @@ const MaxTextWidthDiv = styled.div`
   margin: auto;
 `;
 
-export default function StudySetsIndex() {
+export default function StudySetsIndex({ data }) {
+  const app = data.app.edges[0].node;
+
   return (
     <Layout>
       <SEO title="Study Sets Details" />
-      <NavTest />
 
-      <DetailsHeader />
+      <DetailsHeader title={app.title} />
 
       <Container fluid>
         <MaxTextWidthDiv className="py-5">
-          <h3>Study Sets</h3>
-          <h1 style={{ fontSize: "3em" }}>Your Inbox, upgraded</h1>
-          <p>
-            Big Mail brings a fresh new look to your inbox, as well as an
-            entirely new way of working with it. From advanced A.I
-            categorisation, to its carefully crafted design, the result is less
-            time organising your inbox, and more time enjoying it. And best of
-            all it works with your existing email address. Say hello to Big
-            Mail.
-          </p>
-          <img
-            src={appStoreButtonBlack}
-            style={{ width: "150px", paddingTop: "25px" }}
-            alt="Download on the App Store"
-          ></img>
+          <h3>{app.title}</h3>
+          <h1 style={{ fontSize: "3em" }}>{app.tagline}</h1>
+          <p>{app.shortDescription}</p>
+          <a href={app.getAppLink}>
+            <img
+              src={appStoreButtonBlack}
+              style={{ width: "150px", paddingTop: "25px" }}
+              alt="Download on the App Store"
+            ></img>
+          </a>
         </MaxTextWidthDiv>
       </Container>
 
@@ -54,8 +49,7 @@ export default function StudySetsIndex() {
       <MaxTextWidthDiv className="py-5">
         <h1 style={{ fontSize: "2.5em" }}>Try it for free</h1>
         <h5 className="py-3">
-          Big Mail works with most modern mail providers. Download the app and
-          try it for free for 7 days.
+          Download the app and try it for free for with all features included.
         </h5>
         <img
           src={appStoreButtonBlack}
@@ -65,7 +59,7 @@ export default function StudySetsIndex() {
 
         <div class="pt-5" style={{ fontSize: "15px" }}>
           <div class="text-muted">
-            Study Sets is a product made by &nbsp;
+            {app.title} is a product made by &nbsp;
             <Link
               to="/"
               style={{ color: "#6c757d", textDecoration: "underline" }}
@@ -111,3 +105,19 @@ export default function StudySetsIndex() {
     </Layout>
   );
 }
+
+//export page query
+export const query = graphql`
+  query StudySets {
+    app: allAppsJson(filter: { title: { eq: "Study Sets" } }, limit: 1) {
+      edges {
+        node {
+          title
+          getAppLink
+          tagline
+          shortDescription
+        }
+      }
+    }
+  }
+`;

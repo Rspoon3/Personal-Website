@@ -29,7 +29,7 @@ const TitleDiv = styled.div`
   color: #64b6f9;
 `;
 
-export default function StudySetsDetailsHeader() {
+export default function StudySetsDetailsHeader(props) {
   return (
     <div class="device-grid-container">
       <div class="device-grid">
@@ -48,7 +48,7 @@ export default function StudySetsDetailsHeader() {
         <div />
 
         <TitleDiv>
-          <Title>Study Sets</Title>
+          <Title>{props.title}</Title>
         </TitleDiv>
 
         <img

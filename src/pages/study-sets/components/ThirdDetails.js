@@ -20,12 +20,11 @@ export default function StudySetsThirdDetails() {
         <Row className="px-4 pb-4">
           <Col lg="8">
             <h2 class="title" style={textColor}>
-              Bold Moves
+              Cross Platform
             </h2>
             <p class="subtitle">
-              Big Mail is a top to bottom rethink of your inbox. Not only that,
-              but it was designed to look right at home across all your devices
-              thanks to its entirely native iOS and macOS design.
+              Study Sets works on all of your devices automatically. No
+              subscription, no one time charge, no dontations. It just works.
             </p>
           </Col>
         </Row>
@@ -34,14 +33,11 @@ export default function StudySetsThirdDetails() {
           <Col lg="12" className="d-flex">
             <Card class="d-flex">
               <Card.Body>
-                <h3 style={textColor}>Let your emails make a Scene</h3>
+                <h3 style={textColor}>Create here, study there.</h3>
                 <p class="detail">
-                  Rather than present every email in the same way, a Scene in
-                  Big Mail optimises the layout specifically for it. It makes
-                  newsletters inviting, purchases easy to find, and
-                  conversations a breeze. With six Scenes – Conversations,
-                  Newsletters, Purchases, Notifications, Events and Files – your
-                  inbox has never been more organised.
+                  Create your study material on one device and study on another.
+                  With both iPhone and iPad support you can pick up right where
+                  you left off on whichever device suits you.
                 </p>
               </Card.Body>
               <StaticImage
@@ -60,11 +56,11 @@ export default function StudySetsThirdDetails() {
           <Col lg="5" className="d-flex">
             <Card className="d-flex">
               <Card.Body>
-                <h3 style={textColor}>Reply now or Reply Later.</h3>
+                <h3 style={textColor}>The Report card.</h3>
                 <p class="detail">
-                  Ever receive an email but can't reply to it right away? Big
-                  Mail has a built in "Reply Later" workflow so you can pick it
-                  up later on. It even syncs across all your devices.
+                  See how you did after each study session. Did you ace it? Need
+                  more practice? How quickly could you did you do it. Study Sets
+                  will let you know and offer for you to retry when needed.
                 </p>
               </Card.Body>
               <StaticImage
@@ -83,12 +79,13 @@ export default function StudySetsThirdDetails() {
           <Col lg="7" className="d-flex">
             <Card style={backGradient}>
               <Card.Body className="d-flex flex-column">
-                <h3>On device categorisation</h3>
+                <h3>The perfect study buddy</h3>
                 <div class="d-flex flex-grow-1 align-items-center">
                   <p class="detail lg p-4">
-                    Big Mail categorises your mail on device, meaning your
-                    emails are never shared with us or anyone else. Now that's
-                    smart.
+                    Study Sets is the perfect study buddy. It knows all the
+                    answer, prompts you to do better, and will even play your
+                    favorite tunes. Can your friends do all of that? Didn't
+                    think so.
                   </p>
                 </div>
               </Card.Body>

@@ -4,7 +4,6 @@ import AboutMeSection from "../components/sections/AboutMeSection";
 import AppSection from "../components/sections/AppSection";
 import Layout from "../components/layout/layout";
 import FooterSection from "../components/sections/FooterSection";
-import NavTest from "../components/sections/NavTest";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import styled from "styled-components";
@@ -18,7 +17,6 @@ export default function IndexPage({ data }) {
     <Layout>
       <SEO title="Home" />
       <Container fluid>
-        <NavTest />
         <AboutMeSection />
         <BlankDiv />
         <ProjectSectionTitle id="projects">

@@ -1,6 +1,7 @@
 {
   "order": 1,
   "title": "Study Sets",
+  "tagline": "Studying made simple.",
   "icon": "/images/study sets/AppIcon_512.png",
   "slug": "/study-sets",
   "getAppLink": "https://apps.apple.com/us/app/id1515133577",
