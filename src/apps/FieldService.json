@@ -2,7 +2,7 @@
   "order": 5,
   "title": "NYAB Field Service",
   "tagline": "Easily document field visits.",
-  "slug": "/field-service",
+  "slug": "https://apps.apple.com/us/app/nyab-field-service/id1496562731",
   "getAppLink": "https://github.com/Rspoon3/Apple-Card",
   "icon": "../images/apple card/AppIcon_180.png",
   "heroImage": "../images/field service/device_promo_banner.png",
