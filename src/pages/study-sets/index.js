@@ -23,7 +23,7 @@ export default function StudySetsIndex({ data }) {
 
   return (
     <Layout>
-      <SEO title="Study Sets Details" />
+      <SEO title="Study Sets" />
 
       <DetailsHeader title={app.title} />
 
