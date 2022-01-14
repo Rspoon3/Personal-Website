@@ -46,16 +46,22 @@ export default function StudySetsIndex({ data }) {
       <SecondDetailsSection />
       <ThirdDetailsSection />
 
-      <MaxTextWidthDiv className="py-5">
+      <MaxTextWidthDiv className="py-5 px-3">
         <h1 style={{ fontSize: "2.5em" }}>Try it for free</h1>
         <h5 className="py-3">
           Download the app and try it for free for with all features included.
         </h5>
-        <img
-          src={appStoreButtonBlack}
-          style={{ width: "150px", paddingTop: "25px", paddingBottom: "25px" }}
-          alt="Download on the App Store"
-        ></img>
+        <a href={app.getAppLink}>
+          <img
+            src={appStoreButtonBlack}
+            style={{
+              width: "150px",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+            }}
+            alt="Download on the App Store"
+          ></img>
+        </a>
 
         <div class="pt-5" style={{ fontSize: "15px" }}>
           <div class="text-muted">
@@ -86,7 +92,7 @@ export default function StudySetsIndex({ data }) {
             </Link>
             &nbsp; • &nbsp;
             <Link
-              to="/"
+              to="privacy"
               style={{ color: "#6c757d", textDecoration: "underline" }}
             >
               Privacy Policy

@@ -8,7 +8,9 @@ export default function StudySetsPrivacy() {
   return (
     <Layout>
       <SEO title="Cinematic Privacy & Terms" />
-      <Markdown source={privacy} />
+      <div style={{ padding: "20px" }}>
+        <Markdown source={privacy} />
+      </div>
     </Layout>
   );
 }

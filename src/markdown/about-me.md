@@ -1,11 +1,7 @@
 ---
 title: About Me
 name: "Richard Witherspoon"
-subtitle: "I am an iOS app developer with 5 years of experience developing,
-  testing, and publishing apps for the iPhone, iPad, and Mac. In
-  addition to having 10 apps published on the App Store, I was awarded a
-  WWDC 2019 scholarship. I am currently a student studying Computer
-  Science at Cornell University."
+subtitle: "I am an iOS app developer with 5 years of experience developing, testing, and publishing apps for the iPhone, iPad, and Mac. In addition to having multiples apps published on the App Store, I work full time as the lead iOS developer for InterPro Solutions, and occasionally take on contracting opportunities. I earned my formal education in electrical engineer and economics from RIT."
 appstore: https://apps.apple.com/us/developer/richard-witherspoon/id1397531584
 ---
 

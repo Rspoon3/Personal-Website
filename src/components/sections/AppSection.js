@@ -8,7 +8,7 @@ export default function App(props) {
     <div style={{ color: "black" }}>
       <GatsbyImage
         image={props.heroImage}
-        imgStyle={{ borderRadius: "20px" }}
+        imgStyle={{ borderRadius: "15px" }}
       />
       <Title>{props.app.title}</Title>
       <ShortDescription>{props.app.shortDescription}</ShortDescription>

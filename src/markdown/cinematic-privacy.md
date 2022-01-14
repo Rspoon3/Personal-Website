@@ -36,9 +36,9 @@ We will not store or collect your payment card details. That information is prov
 
 The payment processors we work with are:
 
-• [App Store In-App Purchases](https://www.apple.com/legal/privacy/en-ww/).
+• [App Store In-App Purchases](https://www.apple.com/legal/privacy/en-ww/)
 
-• [RevenueCat](https://www.revenuecat.com/privacy).
+• [RevenueCat](https://www.revenuecat.com/privacy)
 
 ## Consent
 
