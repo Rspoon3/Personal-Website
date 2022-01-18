@@ -2,7 +2,7 @@
   "order": 7,
   "title": "Apple Card",
   "tagline": "The credit card that we all deserve.",
-  "slug": "/apple-card",
+  "slug": "https://applecard.netlify.app/",
   "getAppLink": "https://github.com/Rspoon3/Apple-Card",
   "icon": "../images/apple card/AppIcon_180.png",
   "heroImage": "../images/apple card/device_promo_banner.png",

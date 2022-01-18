@@ -2,7 +2,7 @@
   "order": 4,
   "title": "Cinematic",
   "tagline": "Search. Save. Simple.",
-  "slug": "/cinematic",
+  "slug": "https://cinematicapp.netlify.app/",
   "getAppLink": "https://apps.apple.com/us/app/id1537142179",
   "icon": "/images/cinematic/AppIcon_512.png",
   "heroImage": "../images/cinematic/device_promo_banner.png",
