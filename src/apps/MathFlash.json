@@ -2,7 +2,7 @@
   "order": 8,
   "title": "Math Flash",
   "tagline": "Practice makes perfect.",
-  "slug": "/math-flash",
+  "slug": "https://mathflash.netlify.app",
   "getAppLink": "https://apps.apple.com/us/app/id1449259588",
   "icon": "/images/math flash/AppIcon_512.png",
   "heroImage": "../images/math flash/device_promo_banner.png",
