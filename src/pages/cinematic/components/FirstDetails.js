@@ -22,11 +22,12 @@ export default function CinematicFirstDetails() {
         <Row className="px-4 pb-4">
           <Col lg="8">
             <h2 class="title" style={textColor}>
-              Test Organization
+              Powerful Search
             </h2>
             <p class="subtitle">
-              Study Sets is packed with features to make studying easier than
-              every before and more organized than you can belive.
+              With multiple categories, collections and search, you can always
+              find the movie you're looking for. Quickly find movie information
+              such as cast, rating, and box office earnings.
             </p>
           </Col>
         </Row>
