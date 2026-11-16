@@ -1,3 +1,33 @@
+# Personal Website
+
+## Blog
+
+Posts are plain markdown files in `src/content/blog/`. The file name becomes the URL (`my-post.md` → `/blog/my-post`).
+
+```md
+---
+title: My Post
+description: One sentence shown in the list and in link previews. (optional)
+date: 2026-11-16
+tags: [swift, ios]            # optional
+draft: true                   # optional; drafts show in `npm run dev` but not in production
+cover: ./images/my-cover.png  # optional; shown in the list and used for social previews
+coverAlt: Describe the cover   # optional
+updated: 2026-11-20           # optional
+---
+
+Write markdown here.
+
+![Alt text](./images/screenshot.png)
+![A GIF](./images/demo.gif)
+```
+
+- **Images and GIFs:** put them in `src/content/blog/images/` and reference them with a relative path. Astro optimizes them at build time. GIFs keep their animation, but are served as animated WebP.
+- **Drafts:** `draft: true` posts are hidden from production builds. Remove the line to publish.
+- **Ignored files:** file names starting with `_` are not treated as posts.
+- **Feed:** `/blog/rss.xml`. Tag pages live at `/blog/tags/<tag>`.
+- **Site URL:** the `site` value in `astro.config.mjs` is used for the RSS feed and canonical links.
+
 # Astro Starter Kit: Basics
 
 ```sh

@@ -1,0 +1,15 @@
+---
+import { formatDate, readingTime, type BlogPost } from "../lib/blog";
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+---
+
+<p class="text-sm text-gray-600 dark:text-gray-400">
+  <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>{" "}
+  <span aria-hidden="true">&middot;</span> {readingTime(post.body)}
+  {post.data.draft && <span class="ml-2 rounded bg-yellow-200 px-1.5 py-0.5 text-xs text-yellow-900">Draft</span>}
+</p>

@@ -2,23 +2,25 @@
 import "../styles/global.css";
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const defaultDescription =
+  "Richard Witherspoon is an experienced Engineering Manager and iOS Developer at Fetch Rewards. He builds and maintains apps for iPhone, iPad, Apple Watch, and Mac, and enjoys creating side projects, riding motorcycles, and spending time with his fiancé and dog.";
+
+const { title, description = defaultDescription } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Richard Witherspoon is an experienced Engineering Manager and iOS Developer at Fetch Rewards. He builds and maintains apps for iPhone, iPad, Apple Watch, and Mac, and enjoys creating side projects, riding motorcycles, and spending time with his fiancé and dog."
-    />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body>
     <slot />

@@ -1,0 +1,118 @@
+---
+// Client-side search for the blog list. Fetches /blog/search.json on first use,
+// then hides non-matching posts and orders matches by relevance.
+---
+
+<div id="post-search" class="mb-10">
+  <label for="post-search-input" class="sr-only">Search posts</label>
+  <input
+    id="post-search-input"
+    type="search"
+    placeholder="Search posts…"
+    autocomplete="off"
+    class="w-full rounded-lg border border-gray-300 dark:border-neutral-700 bg-transparent px-4 py-2.5 outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/30"
+  />
+  <p id="post-search-status" class="mt-3 text-sm text-gray-600 dark:text-gray-400" aria-live="polite"></p>
+</div>
+
+<script>
+  type Entry = { id: string; title: string; description: string; tags: string[]; text: string };
+
+  const input = document.getElementById("post-search-input") as HTMLInputElement;
+  const status = document.getElementById("post-search-status") as HTMLElement;
+  const list = document.getElementById("post-list") as HTMLElement | null;
+
+  if (input && list) {
+    const items = [...list.querySelectorAll<HTMLElement>("[data-post-id]")];
+    const originalOrder = [...items];
+    const byId = new Map(items.map((el) => [el.dataset.postId!, el]));
+
+    // Lowercase and strip accents so "cafe" matches "café".
+    const normalize = (s: string) =>
+      s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+    let index: { entry: Entry; title: string; description: string; tags: string; text: string }[] | null = null;
+    let loading: Promise<void> | null = null;
+
+    function load() {
+      loading ??= fetch("/blog/search.json")
+        .then((r) => r.json() as Promise<Entry[]>)
+        .then((entries) => {
+          index = entries.map((entry) => ({
+            entry,
+            title: normalize(entry.title),
+            description: normalize(entry.description),
+            tags: normalize(entry.tags.join(" ")),
+            text: normalize(entry.text),
+          }));
+        });
+      return loading;
+    }
+
+    // Every term must match somewhere. Title hits count most, then tags, description, body.
+    function score(doc: NonNullable<typeof index>[number], terms: string[]) {
+      let total = 0;
+      for (const term of terms) {
+        let s = 0;
+        if (doc.title.includes(term)) s += 10;
+        if (doc.tags.includes(term)) s += 6;
+        if (doc.description.includes(term)) s += 4;
+        if (doc.text.includes(term)) s += 1;
+        if (s === 0) return 0;
+        total += s;
+      }
+      return total;
+    }
+
+    async function run() {
+      const query = input.value.trim();
+
+      const url = new URL(location.href);
+      if (query) url.searchParams.set("q", query);
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+
+      if (!query) {
+        originalOrder.forEach((el) => {
+          el.hidden = false;
+          list!.appendChild(el);
+        });
+        status.textContent = "";
+        return;
+      }
+
+      await load();
+      // The input may have changed while the index was loading.
+      if (input.value.trim() !== query) return;
+
+      const terms = normalize(query).split(/\s+/).filter(Boolean);
+      const matches = index!
+        .map((doc) => ({ id: doc.entry.id, score: score(doc, terms) }))
+        .filter((m) => m.score > 0)
+        .sort((a, b) => b.score - a.score); // stable sort keeps newest-first for ties
+
+      const matched = new Set(matches.map((m) => m.id));
+      items.forEach((el) => (el.hidden = !matched.has(el.dataset.postId!)));
+      matches.forEach((m) => byId.get(m.id)?.isConnected && list!.appendChild(byId.get(m.id)!));
+
+      status.textContent =
+        matches.length === 0
+          ? `No posts match “${query}”.`
+          : `${matches.length} ${matches.length === 1 ? "post" : "posts"} found`;
+    }
+
+    input.addEventListener("focus", () => void load(), { once: true });
+    // Wait 300ms after the last keystroke before searching.
+    let debounce: ReturnType<typeof setTimeout>;
+    input.addEventListener("input", () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => void run(), 300);
+    });
+
+    const initial = new URL(location.href).searchParams.get("q");
+    if (initial) {
+      input.value = initial;
+      void run();
+    }
+  }
+</script>

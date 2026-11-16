@@ -1,0 +1,14 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import PostList from "../../components/PostList.astro";
+import PostSearch from "../../components/PostSearch.astro";
+import { getPosts } from "../../lib/blog";
+
+const posts = await getPosts();
+---
+
+<BlogLayout title="Blog | Richard Witherspoon" description="Writing about iOS development, side projects, and more.">
+  <h1 class="text-4xl font-extrabold mb-12">Blog</h1>
+  {posts.length > 0 && <PostSearch />}
+  <PostList posts={posts} />
+</BlogLayout>
