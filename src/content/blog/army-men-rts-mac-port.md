@@ -7,20 +7,18 @@ cover: ./images/army-men-rts-main-menu.png
 coverAlt: The Army Men RTS main menu running in a native macOS window
 ---
 
-It's been fun watching [Steve Troughton-Smith](https://mastodon.social/@stroughtonsmith) on Mastodon, and I've been getting more and more curious.
-
-His [latest post](https://mastodon.social/@stroughtonsmith/117616643191502309) was about someone who decompiled the original Mac version of SimCity 2000 and ported it to iPad. It inspired me to try something similar.
+It's been fun watching Steve Troughton-Smith explore decompilation and porting using AI tools lately, and I've been getting more and more curious. His latest post was about someone who decompiled the original Mac version of SimCity 2000 and ported it to iPad, with smooth panning and zooming. It inspired me to try something similar.
 
 <div style="display: flex; justify-content: center;">
   <iframe src="https://mastodon.social/@stroughtonsmith/117616643191502309/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="500" height="420" allowfullscreen="allowfullscreen" title="Post by Steve Troughton-Smith on Mastodon"></iframe>
 </div>
 <script src="https://mastodon.social/embed.js" async="async"></script>
 
-## Why Army Men RTS
+## Where I started
 
-My first thought was to contribute to the [Spore decompilation project](https://github.com/NoahBPeterson/spore-decomp). The problem is I couldn't find my old copy of Spore, so that was a dead end, unless I wanted to buy it on Steam or GOG for $20 or $30 for a combo. For a project I was unsure of, I chose not to right now. I'll check in on the GitHub project in a few weeks and see where they're at.
+After thinking of an old game I used to enjoy and doing a bit of research, I wanted to contribute to the [Spore decompilation project](https://github.com/NoahBPeterson/spore-decomp). The problem is I couldn't find my old copy of Spore, so that was a dead end, unless I wanted to buy it on Steam or GOG for $20 or $30 for a combo. For a project I was unsure of, I chose not to right now. I'll check in on the GitHub project in a few weeks and see where they're at.
 
-Then I was out on a walk, still thinking about it. I couldn't think of the name of this old army game at first, but when I got home, a quick ChatGPT search found it in an instant: Army Men RTS.
+Then I was out on a walk, still thinking about it. I couldn't think of the name of this old army game at first, but when I got home, a quick ChatGPT search found it in an instant: [Army Men RTS](https://www.gog.com/en/game/army_men_rts).
 
 It came out in 2002, so it seemed like a good candidate, being so old and relatively small. It also seemed like a fun place to start. For reference, here are the minimum system requirements:
 
