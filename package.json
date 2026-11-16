@@ -11,15 +11,15 @@
     "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
-    "@iconify-json/bi": "^1.1.24",
-    "astro": "^4.14.5",
-    "astro-icon": "^1.1.1",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "@astrojs/check": "^0.9.12",
+    "@iconify-json/bi": "^1.2.7",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.12",
+    "astro-icon": "^1.2.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^30.5.2"
   }
 }
