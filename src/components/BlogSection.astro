@@ -1,0 +1,29 @@
+---
+import PostList from "./PostList.astro";
+import { getPosts } from "../lib/blog";
+
+// Newest post first. The whole section is hidden until there is at least one post.
+const [latest] = await getPosts();
+---
+
+{
+  latest && (
+    <div id="blog" class="px-6 py-16 bg-gray-100 dark:bg-neutral-950">
+      <div class="max-w-2xl mx-auto text-center">
+        <h1 class="mb-4 text-4xl font-extrabold leading-none">Blog</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-10">
+          Writing about iOS development, side projects, and more.
+        </p>
+        <div class="text-left">
+          <PostList posts={[latest]} />
+        </div>
+        <a
+          href="/blog"
+          class="inline-block mt-10 px-12 py-4 rounded-full bg-orange-500 text-white font-bold hover:opacity-70 transition-opacity"
+        >
+          View all posts
+        </a>
+      </div>
+    </div>
+  )
+}
