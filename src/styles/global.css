@@ -1,2 +1,40 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/*
+ * Footnotes, from markdown like `text.[^1]` and `[^1]: the note`. The renderer puts the notes in
+ * a `section[data-footnotes]` at the end of the post, so give it a divider and quieter text, and
+ * use the typography plugin's own variables so it also works in dark mode.
+ */
+.prose section[data-footnotes] {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--tw-prose-hr);
+  font-size: 0.875rem;
+  color: var(--tw-prose-captions);
+}
+
+.prose section[data-footnotes] ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.prose section[data-footnotes] li p {
+  margin: 0;
+}
+
+.prose a[data-footnote-ref],
+.prose a[data-footnote-backref] {
+  text-decoration: none;
+}
+
+.prose a[data-footnote-backref] {
+  margin-left: 0.25em;
+}
+
+/* An image inside a footnote is a small thumbnail, not a full-width figure. */
+.prose section[data-footnotes] img {
+  width: 9rem;
+  margin: 0.5rem 0 0;
+  display: block;
+}
