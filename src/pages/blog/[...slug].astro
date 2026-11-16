@@ -1,0 +1,52 @@
+---
+import { render } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import PostMeta from "../../components/PostMeta.astro";
+import TagList from "../../components/TagList.astro";
+import { getPosts } from "../../lib/blog";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, date, updated, tags, cover } = post.data;
+---
+
+<BlogLayout
+  title={`${title} | Richard Witherspoon`}
+  description={description}
+  image={cover?.src}
+  type="article"
+  publishedTime={date}
+  modifiedTime={updated}
+>
+  <article>
+    <header class="mb-10 space-y-4">
+      <PostMeta post={post} />
+      <h1 class="text-4xl font-extrabold leading-tight">{title}</h1>
+      <TagList tags={tags} />
+    </header>
+
+    <div
+      class="prose dark:prose-invert max-w-none prose-a:text-orange-500 prose-img:rounded-lg prose-img:mx-auto prose-code:before:content-none prose-code:after:content-none"
+    >
+      <Content />
+    </div>
+
+    {
+      updated && (
+        <p class="mt-12 text-sm text-gray-600 dark:text-gray-400">
+          Last updated{" "}
+          <time datetime={updated.toISOString()}>{updated.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</time>
+        </p>
+      )
+    }
+  </article>
+
+  <p class="mt-12">
+    <a href="/blog" class="text-orange-500 hover:opacity-70 transition-opacity">&larr; All posts</a>
+  </p>
+</BlogLayout>
