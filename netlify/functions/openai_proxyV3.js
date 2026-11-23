@@ -1,7 +1,7 @@
 // netlify/functions/openai-proxyV3.js
 //
 // To run locally:
-// 1. cd /Users/richardwitherspoon/Documents/Personal-Website-Astro
+// 1. cd /Users/richardwitherspoon/Documents/WebsiteDev/Personal-Website
 // 2. netlify dev (starts Netlify functions on localhost:8888)
 // 3. Update iOS app ConversationService proxyURL to: http://localhost:8888/.netlify/functions/openai_proxyV3
 // 4. Make sure OPENAI_API_KEY is set in .env file
